@@ -1,5 +1,9 @@
 # Event Register
 Sheet: https://docs.google.com/spreadsheets/d/1n-zgS_pU6uiK5Gmtvr3w08KbRkLc9tBfFrAZEW-ZB0U/edit#gid=0
+Site: 
+- https://event-register.anphabe.com/register.vi.html
+- https://event-register.anphabe.com/register.en.html
+
 
 ## Installation
 For first launch
