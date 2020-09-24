@@ -3,7 +3,7 @@ var app_url = 'https://script.google.com/macros/s/AKfycbxMHWWshrfFJDt0igfEomzCUS
 var price_standard = 4800000;
 var price_vip = 8000000;
 var price_workshop = 0;
-var early_bird_day = Date.parse("12 Mar 2020 23:59:00 GMT");
+var early_bird_day = Date.parse("30 Sep 2020 23:59:00 GMT");
 var now = new Date().getTime();
 var discount = 0.2; // 20%
 
