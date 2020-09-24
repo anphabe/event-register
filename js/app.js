@@ -1,4 +1,3 @@
-
 var app_url = 'https://script.google.com/macros/s/AKfycbxMHWWshrfFJDt0igfEomzCUSCWMnY78iQGWqWZYjpivQ32PNg/exec';
 var price_standard = 4800000;
 var price_vip = 8000000;
@@ -83,7 +82,7 @@ jQuery(function ($) {
                     type: "POST",
                     url: app_url,
                     data: dataString,
-                    dataType: "json",
+                    dataType: "jsonp",
                     cache: false,
                     success: function (data) {
                         if (data.result == 'success') {
