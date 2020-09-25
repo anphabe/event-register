@@ -82,7 +82,7 @@ jQuery(function ($) {
                     type: "POST",
                     url: app_url,
                     data: dataString,
-                    dataType: "jsonp",
+                    dataType: "json",
                     cache: false,
                     success: function (data) {
                         if (data.result == 'success') {
