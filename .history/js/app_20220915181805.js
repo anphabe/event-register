@@ -7,7 +7,6 @@ var early_bird_day = Date.parse("30 Sep 2022 23:59:00 GMT");
 var now = new Date().getTime();
 var discount = 0.3; // 20%
 var discount2 = 0.35; // 20%
-var vat = 0.08 // VAT 8%
 
 jQuery(function ($) {
     $(document).ready(function () {
@@ -26,14 +25,12 @@ jQuery(function ($) {
             var price_sum = price_standard * num_standard + price_vip * num_vip + price_workshop * num_workshop;
             var price_discount = 0;
 
-            if ((now < early_bird_day) || (num_standard >= 3 && num_standard < 5)) {
+            if ((now < early_bird_day) || (num_standard >= 3)  || (num_standard + num_vip > 0 && num_workshop > 0)) {
                 price_discount = price_sum * discount;
-            }
-            if (num_standard >= 5 ){
-                price_discount = price_sum * discount2;
+                
             }
             var price_sub_total = price_sum - price_discount;
-            var price_vat = price_sub_total * vat;
+            var price_vat = price_sub_total * 0.1;
             var price_total = price_sub_total + price_vat;
 
             $('#price_sum').val(price_sum);

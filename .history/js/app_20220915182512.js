@@ -28,8 +28,9 @@ jQuery(function ($) {
 
             if ((now < early_bird_day) || (num_standard >= 3 && num_standard < 5)) {
                 price_discount = price_sum * discount;
+                
             }
-            if (num_standard >= 5 ){
+            else if (num_standard >= 5 ){
                 price_discount = price_sum * discount2;
             }
             var price_sub_total = price_sum - price_discount;
