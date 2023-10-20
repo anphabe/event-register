@@ -63,7 +63,7 @@ jQuery(function ($) {
         })
 
         $('.close-thankyou').click(function () {
-            window.location.href = "https://event.anphabe.com/vietnamexcellence/2023/?register_success=1";
+            window.location.href = "https://event.anphabe.com/vietnambestplacestowork/2023/?register_success=1";
         })
 
         $(".form-register").submit(function (e) {
