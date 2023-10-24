@@ -1,6 +1,6 @@
 var app_url = 'https://script.google.com/macros/s/AKfycbwkZV-zfjxXqgjAE7iqsw1QFpUzgQtM6njuLNitC4xq2dZBJhCFRpqA-wN1_CWuaHnJ/exec';
 
-var price_standard = 4800000;
+var price_standard = 8000000;
 var price_vip = 8000000;
 var price_workshop = 8000000;
 var early_bird_day = Date.parse("30 Sep 2022 23:59:00 GMT");
