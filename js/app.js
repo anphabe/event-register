@@ -1,4 +1,4 @@
-var app_url = 'https://script.google.com/macros/s/AKfycbwkZV-zfjxXqgjAE7iqsw1QFpUzgQtM6njuLNitC4xq2dZBJhCFRpqA-wN1_CWuaHnJ/exec';
+var app_url = 'https://script.google.com/macros/s/AKfycbzDGZN1rEz-z_ImsEeH_4w2iKGZWmy-hHHPJ0WR4NFHdmF58u_1l0e6EIrwAT0nNfRI/exec';
 
 var price_standard = 8000000;
 var price_vip = 8000000;
