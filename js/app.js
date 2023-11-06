@@ -91,6 +91,15 @@ jQuery(function ($) {
                     cache: false,
                     success: function (data) {
                         if (data.result == 'success') {
+                            // Tracking Conversion Ads
+                            var tracking_obj = new Object();
+                            tracking_obj['event'] = 'contact_form_submit';
+                            tracking_obj['ContactForm.fullname'] = $('#name').val();
+                            tracking_obj['ContactForm.email'] = $('#email').val();
+                            tracking_obj['ContactForm.phone'] = $('#cell_phone').val();
+                            window.dataLayer.push(tracking_obj);
+
+
                             $('#myModal').modal('show');
                             window.dataLayer = window.dataLayer || [];
                             window.dataLayer.push({
