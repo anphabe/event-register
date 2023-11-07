@@ -10,7 +10,31 @@ var discount2 = 0.35; // 20%
 var vat = 0.08 // VAT 8%
 
 jQuery(function ($) {
+    /** Anphabe function */
+    function updateUtmInput() {
+        let query = window.location.search;  
+        let searchParams = new URLSearchParams(query);
+        if ( searchParams.has("utm_campaign")) {
+            jQuery('[name ="utm_campaign"]').val(searchParams.get("utm_campaign"));
+        }
+        if ( searchParams.has("utm_source")) {
+            jQuery('[name ="utm_source"]').val(searchParams.get("utm_source"));
+        }
+        if ( searchParams.has("utm_medium")) {
+            jQuery('[name ="utm_medium"]').val(searchParams.get("utm_medium"));
+        }
+        if ( searchParams.has("utm_term")) {
+            jQuery('[name ="utm_term"]').val(searchParams.get("utm_term"));
+        }
+        if ( searchParams.has("utm_content")) {
+            jQuery('[name ="utm_content"]').val(searchParams.get("utm_content"));
+        }
+        jQuery('[name ="landingpage"]').val(window.location.origin+window.location.pathname);
+    }
+        
     $(document).ready(function () {
+        updateUtmInput();
+
         init();
 
         $('#price_standard_text').text(price_standard.toLocaleString() + " VND");
