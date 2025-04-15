@@ -87,7 +87,8 @@ jQuery(function ($) {
         })
 
         $('.close-thankyou').click(function () {
-            window.location.href = "https://event.anphabe.com/vietnamexcellence/2025/?register_success=1";
+            var home_page = $('#home_page').attr('href');
+            window.location.href = home_page +"?register_success=1";
         })
 
         $(".form-register").submit(function (e) {
