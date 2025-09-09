@@ -1,9 +1,9 @@
 var app_url = 'https://script.google.com/macros/s/AKfycbwfocrcrVTYFYus1z9-WOLaBsN8yEbq4175WrCL_hq8mCOu13vi_vTPZLYB6WzsV_bJ/exec';
 
-var price_standard = 5200000;
+var price_standard = 8000000;
 var price_vip = 5200000;
 var price_workshop = 5200000;
-var early_bird_day = Date.parse("12 Apr 2025 23:59:00 GMT");
+var early_bird_day = Date.parse("15 Oct 2025 23:59:00 GMT");
 var now = new Date().getTime();
 var discount = 0.2; // 20%
 var discount2 = 0.35; // 20%
@@ -12,26 +12,26 @@ var vat = 0.08 // VAT 8%
 jQuery(function ($) {
     /** Anphabe function */
     function updateUtmInput() {
-        let query = window.location.search;  
+        let query = window.location.search;
         let searchParams = new URLSearchParams(query);
-        if ( searchParams.has("utm_campaign")) {
+        if (searchParams.has("utm_campaign")) {
             jQuery('[name ="utm_campaign"]').val(searchParams.get("utm_campaign"));
         }
-        if ( searchParams.has("utm_source")) {
+        if (searchParams.has("utm_source")) {
             jQuery('[name ="utm_source"]').val(searchParams.get("utm_source"));
         }
-        if ( searchParams.has("utm_medium")) {
+        if (searchParams.has("utm_medium")) {
             jQuery('[name ="utm_medium"]').val(searchParams.get("utm_medium"));
         }
-        if ( searchParams.has("utm_term")) {
+        if (searchParams.has("utm_term")) {
             jQuery('[name ="utm_term"]').val(searchParams.get("utm_term"));
         }
-        if ( searchParams.has("utm_content")) {
+        if (searchParams.has("utm_content")) {
             jQuery('[name ="utm_content"]').val(searchParams.get("utm_content"));
         }
-        jQuery('[name ="landingpage"]').val(window.location.origin+window.location.pathname);
+        jQuery('[name ="landingpage"]').val(window.location.origin + window.location.pathname);
     }
-        
+
     $(document).ready(function () {
         updateUtmInput();
 
@@ -53,7 +53,7 @@ jQuery(function ($) {
             if ((now < early_bird_day) || (num_standard >= 3 && num_standard < 5)) {
                 price_discount = price_sum * discount;
             }
-            if (num_standard >= 5 ){
+            if (num_standard >= 5) {
                 price_discount = price_sum * discount2;
             }
             var price_sub_total = price_sum - price_discount;
@@ -88,7 +88,7 @@ jQuery(function ($) {
 
         $('.close-thankyou').click(function () {
             var home_page = $('#home_page').attr('href');
-            window.location.href = home_page +"?register_success=1";
+            window.location.href = home_page + "?register_success=1";
         })
 
         $(".form-register").submit(function (e) {
